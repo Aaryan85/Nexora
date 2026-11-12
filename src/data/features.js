@@ -1,0 +1,71 @@
+export const featuresData = [
+  {
+    id: 'real-time',
+    title: 'Real-Time Analytics',
+    tagline: 'Instant Telemetry',
+    description: 'Monitor your business metrics with continuously updated insights streaming with sub-50ms latency across every user touchpoint.',
+    badge: 'Live Streaming',
+    icon: 'Activity',
+    highlight: '4.2M events/sec',
+    bentoSpan: 'col-span-12 lg:col-span-7',
+    previewType: 'streamChart',
+  },
+  {
+    id: 'smart-reporting',
+    title: 'Smart Reporting',
+    tagline: 'Automated Synthesis',
+    description: 'Generate meaningful, executive-ready reports with AI summaries and multi-channel distribution in one click.',
+    badge: 'Auto-Generated',
+    icon: 'FileText',
+    highlight: 'One-click export',
+    bentoSpan: 'col-span-12 lg:col-span-5',
+    previewType: 'reportPreview',
+  },
+  {
+    id: 'growth-insights',
+    title: 'Growth Insights',
+    tagline: 'Predictive Intelligence',
+    description: 'Identify high-impact trends, customer churn triggers, and expansion opportunities before your competition does.',
+    badge: 'Predictive AI',
+    icon: 'TrendingUp',
+    highlight: '+34% opportunity capture',
+    bentoSpan: 'col-span-12 lg:col-span-5',
+    previewType: 'forecastWidget',
+  },
+  {
+    id: 'unified-dashboard',
+    title: 'Unified Dashboard',
+    tagline: 'Single Source of Truth',
+    description: 'Bring your most important business metrics from Stripe, Segment, Snowflake, and Postgres into one beautifully composed workspace.',
+    badge: '50+ Connectors',
+    icon: 'LayoutDashboard',
+    highlight: 'Zero data silos',
+    bentoSpan: 'col-span-12 lg:col-span-7',
+    previewType: 'integrationsWidget',
+  },
+];
+
+export const howItWorksSteps = [
+  {
+    step: '01',
+    title: 'Connect your data',
+    description: 'Bring your business information into one place. Native one-click integrations with Stripe, Segment, Snowflake, Postgres, and Shopify in under 3 minutes.',
+    details: ['Zero engineering pipelines required', 'Automated schema detection', 'End-to-end SOC2 encryption'],
+    icon: 'Database',
+  },
+  {
+    step: '02',
+    title: 'Understand your metrics',
+    description: 'Explore clear visualizations and meaningful insights. Transform messy raw records into intuitive, interactive dashboards that anyone can read.',
+    details: ['Interactive drill-downs', 'Anomaly & spike detection', 'Multi-attribute cohort analysis'],
+    icon: 'BarChart3',
+  },
+  {
+    step: '03',
+    title: 'Take action',
+    description: 'Use your insights to make better business decisions. Trigger automated webhooks, alert executive Slack channels, and align your team on what moves revenue.',
+    details: ['Automated Slack/Email triggers', 'Weekly executive summaries', 'Measurable ROI tracking'],
+    icon: 'Sparkles',
+  },
+];
+

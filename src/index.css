@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg: #FAFAFA;
+    --surface: #FFFFFF;
+    --surface-secondary: #F3F3F3;
+    --text-primary: #171717;
+    --text-secondary: #737373;
+    --border: #E5E5E5;
+    --highlight: #EEEEEE;
+    --pattern-dot: rgba(0, 0, 0, 0.08);
+    --pattern-grid: rgba(0, 0, 0, 0.04);
+  }
+
+  .dark {
+    --bg: #111111;
+    --surface: #1B1B1B;
+    --surface-secondary: #242424;
+    --text-primary: #F5F5F5;
+    --text-secondary: #A3A3A3;
+    --border: #333333;
+    --highlight: #292929;
+    --pattern-dot: rgba(255, 255, 255, 0.09);
+    --pattern-grid: rgba(255, 255, 255, 0.05);
+  }
+
+  body {
+    background-color: var(--bg);
+    color: var(--text-primary);
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+}
+
+/* Monochrome scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-secondary);
+}
+
+/* Background Patterns (Strictly CSS, adapts to dark mode) */
+.dot-pattern {
+  background-image: radial-gradient(var(--pattern-dot) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.dot-pattern-dense {
+  background-image: radial-gradient(var(--pattern-dot) 1px, transparent 1px);
+  background-size: 14px 14px;
+}
+
+.grid-pattern {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, var(--pattern-grid) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--pattern-grid) 1px, transparent 1px);
+}
+
+.grid-pattern-fine {
+  background-size: 16px 16px;
+  background-image: 
+    linear-gradient(to right, var(--pattern-grid) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--pattern-grid) 1px, transparent 1px);
+}
+
+.soft-radial-highlight {
+  background: radial-gradient(circle at 50% 0%, var(--pattern-grid) 0%, transparent 70%);
+}
+
+/* Monochrome Card Transitions */
+.mono-card {
+  transition: border-color 0.15s ease, background-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+pre, code {
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+}
